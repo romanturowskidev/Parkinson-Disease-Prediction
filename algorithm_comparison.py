@@ -1,6 +1,6 @@
 # import all necessary libraries
 import pandas
-from pandas.tools.plotting import scatter_matrix
+from pandas.plotting import scatter_matrix
 from sklearn import cross_validation
 from sklearn.metrics import matthews_corrcoef
 from sklearn.metrics import classification_report
