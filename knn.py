@@ -38,7 +38,7 @@ scoring = 'accuracy'
 
 results = []
 clf = KNeighborsClassifier()
-kfold = sklearn.model_selection.KFold(n_splits=num_instances,random_state = seed)
+kfold = sklearn.model_selection.KFold(n_splits=num_instances, shuffle=True, random_state = seed)
 cv_results = cross_val_score(clf, X_train, Y_train, cv = kfold, scoring = scoring)
 clf.fit(X_train, Y_train)
 predictions = clf.predict(X_validation)
